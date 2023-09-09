@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="flex">
+        <div class="hng">HNGX</div>
+        <div class="info">
+            <div class="slack_name" data-testid="slackUserName">
+                Bolu Emmanuel
+            </div>
+            <div class="slack_pic" data-testid="slackDisplayImage">
+
+            </div>
+        </div>
+        <div class="date">
+            <div class="day" data-testid="currentDayOfTheWeek">
+                error
+            </div>
+            <div class="time" data-testid="currentUTCTime">
+                error
+            </div>
+        </div>
+        <div class="track">
+            <div class="frontend" data-testid="myTrack">Frontend</div>
+            <button><a href="https://github.com/Bolexzy" style="text-decoration: none; color: #ffff;" target="_blank"
+                    data-testid="githubURL">My
+                    Github</a></button>
+        </div>
+    </div>
+</body>
+
+<script>
+
+    const displayTime = document.querySelector(".time");
+    const displayDate = document.querySelector('.day');
+
+    // Time
+    function showTime() {
+        let currentUTCTime = new Date();
+
+        const weekDay = [
+            'Sunday',
+            'Monday',
+            'Tuesday',
+            'Wednesday',
+            'Thursday',
+            'Friday',
+            'Saturday',
+        ]
+
+        const currentDay = weekDay[currentUTCTime.getDay()];
+
+
+        displayDate.innerText = currentDay.toString();
+
+        // Extract hours, minutes, seconds, and milliseconds
+        const hours = currentUTCTime.getUTCHours().toString().padStart(2, '0');
+        const minutes = currentUTCTime.getUTCMinutes().toString().padStart(2, '0');
+        const seconds = currentUTCTime.getUTCSeconds().toString().padStart(2, '0');
+        const milliseconds = currentUTCTime.getUTCMilliseconds().toString().padStart(3, '0');
+
+
+        displayTime.innerText = `${hours}:${minutes}:${seconds}.${milliseconds} UTC`;
+        setTimeout(showTime, 1000);
+    }
+
+    showTime();
+</script>
+
+</html>
