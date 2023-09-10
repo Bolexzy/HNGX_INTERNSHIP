@@ -29,8 +29,8 @@
         </div>
         <div class="track">
             <div class="frontend" data-testid="myTrack">Frontend</div>
-            <button><a href="https://github.com/Bolexzy" style="text-decoration: none; color: #ffff;" target="_blank"
-                    data-testid="githubURL">My
+            <button><a href="https://github.com/Bolexzy/HNGX_INTERNSHIP/tree/main/Task_1"
+                    style="text-decoration: none; color: #ffff;" target="_blank" data-testid="githubURL">My
                     Github</a></button>
         </div>
     </div>
@@ -43,7 +43,8 @@
 
     // Time
     function showTime() {
-        let currentUTCTime = new Date();
+        let currentUTCTime = new Date().getTime();
+        let currentDayTime = new Date();
 
         const weekDay = [
             'Sunday',
@@ -55,21 +56,15 @@
             'Saturday',
         ]
 
-        const currentDay = weekDay[currentUTCTime.getDay()];
+        const currentDay = weekDay[currentDayTime.getDay()];
 
 
         displayDate.innerText = currentDay.toString();
 
-        // Extract hours, minutes, seconds, and milliseconds
-        const hours = currentUTCTime.getUTCHours().toString().padStart(2, '0');
-        const minutes = currentUTCTime.getUTCMinutes().toString().padStart(2, '0');
-        const seconds = currentUTCTime.getUTCSeconds().toString().padStart(2, '0');
-        const milliseconds = currentUTCTime.getUTCMilliseconds().toString().padStart(3, '0');
-
-
-        displayTime.innerText = `${hours}:${minutes}:${seconds}.${milliseconds} UTC`;
+        displayTime.innerText = `${currentUTCTime} ms`;
         setTimeout(showTime, 1000);
     }
+
 
     showTime();
 </script>
