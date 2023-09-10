@@ -49,14 +49,7 @@ body {
   font-size: 50px;
   align-self: flex-end;
   letter-spacing: 5px;
-}
-
-.info .slack_pic {
-  width: 280px;
-  height: 280px;
-  background-image: url("./images/profiel.png");
-  background-repeat: no-repeat;
-  background-size: contain;
+  font-weight: 700;
 }
 
 .date {
@@ -76,8 +69,8 @@ body {
   border: 1px solid black;
   padding: 5px;
   background-color: #e5e9f4;
-  font-size: xx-large;
-  font-weight: 600;
+  font-size: 25px;
+  font-weight: 500;
   text-shadow: #47494a;
   border-radius: 7px;
   margin-right: 8px;
@@ -88,8 +81,8 @@ body {
   height: 36px;
   border: 1px solid black;
   padding: 5px;
-  font-size: large;
-  font-weight: 800;
+  font-size: 15px;
+  font-weight: 500;
   background-color: #e5e9f4;
   border-radius: 7px;
 }
@@ -102,7 +95,7 @@ body {
 }
 
 .frontend {
-  font-size: 70px;
+  font-size: 40px;
   font-weight: 600;
   color: #0f2c2c;
   margin: 0 auto;
@@ -112,7 +105,7 @@ button {
   background-color: rgba(10, 55, 64, 0.493);
   color: #ffffff;
   margin: 5rem auto;
-  font-size: 40px;
+  font-size: 30px;
   padding: 1rem;
   border-radius: 20px;
 }
